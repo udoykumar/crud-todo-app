@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Basic</title>
+    <title>CRUD Glassmorphism To-Do List App</title>
     <!-- font awesome icon  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- tailwind css link  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- tailwind css and daisy ui link  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body {
@@ -18,17 +19,29 @@
     </style>
 </head>
 
-<body class="bg-[#e5e5e5] flex justify-center items-center mt-10">
-    <div class="app w-[300px] border-4 border-[#abcea1] bg-[#fff]">
-        <h4>TODO App</h4>
-        <div id="addNew">
-            <span>Add New Task</span>
-            <i class="fa-solid fa-plus"></i>
+<body
+    class="flex justify-center items-center h-screen  w-screen bg-no-repeat bg-center bg-[url('./bg-img.jpg')] border-2 border-e-red-500">
+    <div class="flex justify-center items-center w-full h-full py-0 px-4">
+        <div
+            class="w-full max-w-[400px] flex items-center justify-center flex-col gap4 text-white rounded-lg shadow-[0_0_100px_rgba(0,0,0,0.5)] border-3 border-gray-300 backdrop-blur-sm bg-white/30 p-10 rounded-x">
+            <h1 class="text-3xl font-bold text-black/50">To-Do App</h1>
+            <form class="flex justify-between gap-3 items-center w-full">
+                <input type="text" id="task-input" placeholder="Add a new task..."
+                    class="flex-1 py-3 px-4 text-lg border-none outline-none rounded-lg bg-[rgba(173,126,150,0.3)] text-white">
+                <button type="submit" id="add-task-btn"
+                    class="w-8 h-8 bg-[rgba(173,126,150,0.3)] rounded-full text-black text-2xl flex justify-center items-center cursor-pointer transition-all duration-200 ease-in-out hover:scale-110 hover:bg-[#ff6f91] ">+</button>
+            </form>
+            <div class="todos-container mt-10">
+                <ul id="task-list">
+
+                </ul>
+                <img id="empty-image" width="100" src="./image.svg" alt="">
+            </div>
         </div>
-        <h5>Tasks</h5>
     </div>
 
-    <script src="main.js"></script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

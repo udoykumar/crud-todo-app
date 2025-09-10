@@ -1,0 +1,29 @@
+#task-list li .checkbox {
+  min-width: 20px;
+  height: 20px;
+  border: 2px solid rgba(225, 255, 255, 0.3);
+  background: transparent;
+  border-radius: 50%;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#task-list li .checkbox:checked::before {
+  content: "\2713";
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background: #ff6f91;
+  width: 15px;
+  /* overflow: hidden; */
+}
+#task-list li span {
+  flex: 1;
+  margin-left: 10px;
+  word-wrap: break-word;
+}
